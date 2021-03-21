@@ -15,7 +15,7 @@ CMD [ "/bin/sh" ]
 
 # Add the library src to our build env
 FROM env AS devel
-# Create lib directory
+# Create lib directory 
 WORKDIR /home/lib
 # Bundle lib source
 COPY . .
@@ -34,5 +34,5 @@ FROM env AS install
 # Copy lib from build to install
 COPY --from=build /usr/local /usr/local/
 # Copy  sample
-WORKDIR /home/sample
-COPY ci/sample .
+#WORKDIR /home/sample
+#COPY ci/sample .
