@@ -1,8 +1,8 @@
 # CLion remote docker environment (How to build docker container, run and stop it)
 #
 # Build and run:
-#   docker build -t clion/remote-cpp-env:0.5 -f Dockerfile.remote-cpp-env .
-#   docker run -d --cap-add sys_ptrace -p127.0.0.1:2222:22 --name clion_remote_env clion/remote-cpp-env:0.5
+#   docker build -t debian_builder_clion -f DebianStretchBuilderCLion.dockerfile .
+#   docker run -d --cap-add sys_ptrace -p127.0.0.1:2222:22 --name ssh_debian_builder_clion debian_builder_clion
 #   ssh-keygen -f "$HOME/.ssh/known_hosts" -R "[localhost]:2222"
 #
 # stop:
